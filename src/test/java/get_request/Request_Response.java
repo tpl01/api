@@ -1,3 +1,6 @@
+package get_request;
+
+import io.restassured.http.Header;
 import io.restassured.response.Response;
 
 import static io.restassured.RestAssured.given;
@@ -33,6 +36,29 @@ public class Request_Response {
         Response response = given().when().get(url);
         // Response prettyPrint() mtd ile yazdırılır
         response.prettyPrint();
+
+        //status code alma
+        int statusCode=response.statusCode();
+        System.out.println("statusCode = " + statusCode);
+
+        //status line nasıl
+        System.out.println("statusLine() = " + response.statusLine());
+
+        //content type nasıl ulaşıllır
+        System.out.println("contentType() = " + response.contentType());
+
+        //Headerlardan herhangibir degere ulasma
+
+        String header=response.header("Server");
+        System.out.println("header = " + header);
+
+        System.out.println("***************************************");
+
+        //headerlain hepsine ulasmak
+        System.out.println("headers() = " + response.headers());
+
+        //Response süresine ulaşma
+        System.out.println("time() = " + response.time());
 
 
     }
