@@ -1,17 +1,15 @@
 package get_request;
 
 import base_urls.JsonPlaceHolderBaseUrl;
-import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import io.restassured.specification.RequestSpecification;
 import org.hamcrest.Matchers;
 import org.junit.Test;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.equalTo;
 
-public class Get04 extends JsonPlaceHolderBaseUrl {         //yeni ayarlamalar ile aynı get03
+public class Get04_RequestSpec extends JsonPlaceHolderBaseUrl {         //yeni ayarlamalar ile aynı get03
     //page object model olusturduk   (JsonPlaceHolderBaseUrl   clası olusturduk)
 
     @Test

@@ -8,7 +8,7 @@ import org.junit.Test;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.equalTo;
 
-public class Get03 {
+public class Get03_Hamcrest {
     /*
         Given
             https://jsonplaceholder.typicode.com/todos/23
