@@ -32,6 +32,7 @@ public class Post02 extends JsonPlaceHolderBaseUrl {
 
         //doğrulama yapılır
         Map<String,Object> actualData=response.as(HashMap.class);
+        //json datayı java objesine dönüştürmek icin
 
         assertEquals(201,response.statusCode());
         assertEquals(payLoad.get("userId"),actualData.get("userId"));
