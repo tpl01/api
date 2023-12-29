@@ -3,8 +3,8 @@ package post_request;
 import base_urls.HerokuAppBaseUrl;
 import io.restassured.response.Response;
 import org.junit.Test;
+import pojos.BookingDatesPojo;
 import pojos.BookingPojo;
-import pojos.HerokuAppPojo;
 import pojos.HerokuRootPojo;
 
 import static io.restassured.RestAssured.given;
@@ -46,8 +46,8 @@ public class Post05 extends HerokuAppBaseUrl {
     public void post(){
         spec.pathParam("first","booking");
 
-        BookingPojo bookingDates= new BookingPojo("2021-09-21","2021-12-21");
-        HerokuAppPojo payLoad = new HerokuAppPojo("Ali","Can",999,true,bookingDates,"Breakfast");
+        BookingDatesPojo bookingDates= new BookingDatesPojo("2021-09-21","2021-12-21");
+        BookingPojo payLoad = new BookingPojo("Ali","Can",999,true,bookingDates,"Breakfast");
 
         Response response = given(spec).body(payLoad).when().post("{first}");
         response.prettyPrint();
