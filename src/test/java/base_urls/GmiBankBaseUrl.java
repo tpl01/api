@@ -8,6 +8,8 @@ import org.junit.Before;
 import static utilities.GmiBankAuthentication.generateToken;
 
 public class GmiBankBaseUrl {
+
+
     protected RequestSpecification spec;
 
     @Before
